@@ -17,7 +17,7 @@ import BotaoDeleta from './componentes/deletarTarefa.js'
 		tarefa.innerHTML = conteudo  //  inserindo no html o corpo com o conteúdo da li
 
 		tarefa.appendChild(BotaoConclui())  //  cria a li sempre que clicar o botao
-		tarefa.appendChild(BotaoDeleta())  //   deleta a li sempre que clicar
+		tarefa.appendChild(BotaoDeleta())  //  deleta a li sempre que clicar
 		lista.appendChild(tarefa)         //  criando uma lista em formato de filhos da ul que é o pai
 		input.value = " "      //   limpando o input para mais adições
 	}
