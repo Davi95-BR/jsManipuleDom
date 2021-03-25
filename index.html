@@ -15,15 +15,17 @@
     <div class="todo-list">
       <h1 class="title">Ceep</h1>
       <form class="form" action="">
-        <input class="form-input" data-form-input>
-        <button class="form-button" data-form-buttom> Novo Item </button>
+        <input class="form-input" data-form-input> <!-- data-form-input é um componente-->
+        <input type="datetime-local" data-form-date placeholder="Preencha 2021-03-25"> <!-- datetime-local é um componente -->
+        <button class="form-button" data-form-buttom> Novo Item </button> <!-- data-form-buttom é um componente -->
       </form>
-        <ul class="list" data-list>
+        <ul class="list" data-list> <!-- data list é um componente -->
         </ul>
     </div>
   </div>
 </body>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
   <script type ="module" src="./assets/js/main.js"></script>
   <script type ="module" src="./assets/js/componentes/deletarTarefa.js"></script>
   <script type ="module" src="./assets/js/componentes/concluirTarefa.js"></script>
