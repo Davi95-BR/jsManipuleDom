@@ -1,3 +1,5 @@
+"use strich"
+
 const BotaoConclui = () => {
 	const botaoConclui = document.createElement('buttom') // criando o botaoConclui
 	botaoConclui.classList.add('check-buttom')  // adiconando a class css

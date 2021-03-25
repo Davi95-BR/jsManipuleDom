@@ -1,3 +1,5 @@
+"use strich"
+
 import BotaoConclui from './componentes/concluirTarefa.js'
 import BotaoDeleta from './componentes/deletarTarefa.js'
 

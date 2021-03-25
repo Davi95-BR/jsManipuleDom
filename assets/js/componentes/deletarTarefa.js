@@ -1,3 +1,5 @@
+"use strich"
+
 const BotaoDeleta = () => {
 
 	const botaoDeleta = document.createElement('buttom') // criando o botãoDeleta
