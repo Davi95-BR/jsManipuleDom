@@ -5,7 +5,7 @@ import BotaoDeleta from './componentes/deletarTarefa.js'
 
 	const CriarTarefa = (evento) => {
 
-		evento.preventDefault()//   previnir o comportamento padrão do formulário
+		evento.preventDefault()  //  previnir o comportamento padrão do formulário
 
 		const lista = document.querySelector('[data-list]')  // selecionando o campo e criando uma variável
 		const input = document.querySelector('[data-form-input]')  // selecionando o campo e criando uma variável
