@@ -21,6 +21,9 @@ import BotaoDeleta from './componentes/deletarTarefa.js'
 		const criaTarefa = criarTarefa(dados) // Chamando a var com os parâmetros de dados
 
 		lista.appendChild(criaTarefa)// criando uma lista em formato de filhos da ul que é o pai
+		
+		sessionStorage.setItem(tarefa, dados)
+
 		input.value = " "      // limpando o input para + adiçôes
 
 	} 
