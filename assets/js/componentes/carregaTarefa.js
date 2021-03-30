@@ -1,13 +1,19 @@
-import { Tarefa } from './criarTarefa.js'
+"use strich"
 
-export const CarregaTarefa = () => {
+  
+import { ordenaDatas, removeDatasRepetidas } from "../service/data.js"
+import { criaData } from "./criarData.js"
+
+export const carregaTarefa = () => { 
     const lista = document.querySelector('[data-list]')
-    const tarefasCadastradas = JSON.parse(localStorage.getItem('tarefa')) || [] // pipe || para criar uma avaliação de curto circuito.
-    
-    lista.innerHTML = " " // Comando que limpa a lista ao recarregar 
 
-    tarefasCadastradas.forEach((tarefa) => {
-    lista.appendChild(Tarefa(tarefa))  // comando para exibir as tarefas na tela
+    const tarefasCadastradas = JSON.parse(localStorage.getItem('tarefas'))||[]
 
+    lista.innerHTML = " "
+    const dataUnicas = removeDatasRepetidas(tarefasCadastradas)
+    ordenaDatas(dataUnicas)
+    dataUnicas.forEach((dia) => {
+        
+        lista.appendChild(criaData(dia))
     })
 }

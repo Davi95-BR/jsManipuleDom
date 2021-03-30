@@ -20,7 +20,7 @@ body {
 
 .title {
   border-bottom: 1px solid rgba(246, 241, 209, 0.5);
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: "BioRhyme", serif;
   color: #F6F1D1;
 }
@@ -78,7 +78,7 @@ body {
 
 .title {
   border-bottom: 1px solid rgba(246, 241, 209, 0.5);
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: "BioRhyme", serif;
   color: #F6F1D1;
 }
@@ -124,17 +124,16 @@ body {
   padding: 1rem 3rem;
 }
 
-.check-buttom, .delete-buttom {
+.check-button, .delete-button {
   background-color: #F6F1D1;
   border: none;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   outline: none;
   border-radius: 2px;
   cursor: pointer;
-  color: black;
 }
 
-.task.done .check-buttom {
+.task.done .check-button {
   background-color: #46494C;
   color: #F6F1D1;
 }
@@ -154,6 +153,14 @@ body {
 
 .content {
   margin: 0;
+}
+
+.content-data { 
+  color: #F6F1D1;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0.5rem;
+  padding: 1rem 3rem;
 }
 
 .task.done .content {

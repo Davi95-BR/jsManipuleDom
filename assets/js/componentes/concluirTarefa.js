@@ -1,22 +1,26 @@
 "use strich"
+const concluirTarefa = ( atualiza, id) => {
+    const tarefaCadastradas = JSON.parse(localStorage.getItem('tarefas'))
 
-const BotaoConclui = () => {
-	const botaoConclui = document.createElement('buttom') // criando o botaoConclui
-	botaoConclui.classList.add('check-buttom')  // adiconando a class css
-	botaoConclui.innerText = 'concluir'         // adicionando texto no botaoConclui
+    tarefaCadastradas[id].concluida = !tarefaCadastradas[id].concluida
+    localStorage.setItem('tarefas', JSON.stringify(tarefaCadastradas))
 
-	botaoConclui.addEventListener('click', ConcluirTarefa)  // evento ao clicar colocar a função ConcluirTarefa
-
-	return botaoConclui // retornando a variável para o BotaoConclui
+    atualiza()
 
 }
 
-const ConcluirTarefa = (evento) => {
-	const botaoConclui = evento.target // saber se o botaoConclui foi clicado
+const BotaoConclui = (atualiza, id) => { 
+    const botaoConclui = document.createElement('button')  
+    
+    botaoConclui.classList.add('check-button')
+    botaoConclui.innerText = 'concluir'
 
-	const tarefaCompleta = botaoConclui.parentElement // pegando o pai do botãoConclui que é a li
+    botaoConclui.addEventListener('click', ()=> concluirTarefa(atualiza, id))
 
-	tarefaCompleta.classList.toggle('done') //toggle == "alternancia entre V OU F, verificação do click do botaoConclui "
+    return botaoConclui
+
 }
 
-export default BotaoConclui   // Proteção em módulos que traz o mesmo que IIFE 'função de execução imediata'
+
+
+export default BotaoConclui
